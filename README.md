@@ -14,9 +14,7 @@ Nå har du kildekoden på maskinen din, og da må du bare importere den til din 
 
 #### Eclipse
 
-```bash
-
-```
+Kjør `mvn eclipse:eclipse` og importer inn i Eclipse.
 
 
 #### IntelliJ Idea
@@ -80,7 +78,9 @@ Lag en DELETE REST-metode for å slette et navn. Urlen skal være `http://localh
 Lag en test for denne metoden i `NameResourceTest`.
 
 ## Oppgave 3: Lys opp i klasserommet
-Her skal du bruke HueKlient til å styre lyspærene vi har satt opp. Når du får beskjed om å autentisere, må du gå ned til HUBen og trykke på knappen.
+Her skal du bruke HueKlient til å styre lyspærene vi har satt opp. 
+Les om APIene på http://www.developers.meethue.com/philips-hue-api (Du må registrere deg for å se URLene du kan bruke)
+Lær av toggleAllLights for å kunne sette state på pærene.
 
 ### 3.1
 Få en av lyspærene til å lyse i en valgfri farge.
@@ -95,6 +95,8 @@ Få en lyspære til å forandre farge fra blå til rød til grønn.
 Gjør andre kule ting med lyspærene.
 
 ## Oppgave 4: Post MEME på Twitter
+
+Ta utgangspunkt i MemeKlient for å løse følgende oppgaver.
 
 ### 4.1
 Bruk [memegenerator.net](http://version1.api.memegenerator.net/) sitt API til å lage et bilde med en morsom tekst.
