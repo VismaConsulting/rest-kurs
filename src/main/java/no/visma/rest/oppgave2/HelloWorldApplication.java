@@ -28,6 +28,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
             HelloWorldConfiguration configuration,
             Environment environment
     ) {
+        // Legg til REST-ressurser her
         final HelloWorldResource resource = new HelloWorldResource();
         environment.jersey().register(resource);
     }
