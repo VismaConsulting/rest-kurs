@@ -1,6 +1,29 @@
 # REST-kurs
 
-## Oppgave 1
+## Oppsett
+
+### Nedlasting
+Last ned dette repositoriet til din PC. Det kan du gjøre på noen forskjellige måter. I alle tilfeller må du legge prosjektmappen i workspacet til IDEen din.
+
+1. Laste ned zip-filen, og pakk den ut i en mappe som Eclipse eller IntelliJ kan finne.
+1. Klone med git. `git clone https://github.com/henrikno/rest-kurs.git` eller `git clone git@github.com:henrikno/rest-kurs.git`
+1. Sjekke ut med subversion: `svn co https://github.com/henrikno/rest-kurs`
+
+### Importer
+Nå har du kildekoden på maskinen din, og da må du bare importere den til din IDE.
+
+#### Eclipse
+
+```bash
+
+```
+
+
+#### IntelliJ Idea
+
+1. Åpne IntelliJ. Velg File -> Open, og velg pom.xml i rest-kurs-mappen.
+
+## Oppgave 1: Bruke et API
 Man må ha en konto på Twitter for å kunne gjøre oppgaven, så hvis man ikke har det, lag en tullekonto, eller sett deg sammen med en som har det.
 
 `TwitterKlient.java` har i dag funksjonalitet for å koble seg til Twitter, og hente en liste med tweets.
@@ -18,7 +41,7 @@ Legg til en metode for å slutte å følge en Twitter-bruker.
 Legg til en metode for å tweete en melding med hashtagen #restFTW med mention til @andersem og @henrikno.
  
 
-## Oppgave 2
+## Oppgave 2: Lage et eget API
 `HelloWorldApplication` kjører en enkel REST-server som er bygget på Dropwizard. Den har en ressurs, `HelloWorldResource` som eksponerer en enkel teller.
 
 ### 2.1
@@ -45,6 +68,11 @@ Lag en PUT REST-metode for å endre et navn. Urlen skal være `http://localhost:
 
 ### 2.8
 Lag en DELETE REST-metode for å slette et navn. Urlen skal være `http://localhost:8080/navn/<id>`
+
+## Oppgave 3: Lys opp i klasserommet
+
+### 3.1
+
 
 
 
