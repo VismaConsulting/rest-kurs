@@ -23,6 +23,10 @@ Nå har du kildekoden på maskinen din, og da må du bare importere den til din 
 
 1. Åpne IntelliJ. Velg File -> Open, og velg pom.xml i rest-kurs-mappen.
 
+### Bygg
+
+Kjør `mvn clean install` for å laste ned avhengigheter, bygge prosjektet og kjøre alle testene.
+
 ## Oppgave 1: Bruke et API
 Man må ha en konto på Twitter for å kunne gjøre oppgaven, så hvis man ikke har det, lag en tullekonto, eller sett deg sammen med en som har det.
 
@@ -96,9 +100,4 @@ Gjør andre kule ting med lyspærene.
 Bruk [memegenerator.net](http://version1.api.memegenerator.net/) sitt API til å lage et bilde med en morsom tekst.
 
 ### 4.2
-Lag en ny metode i TwitterKlient for å poste bildet.
-
-
-
-
-
+Lag en ny metode i TwitterKlient for å poste bildet fra 4.1
