@@ -51,23 +51,29 @@ Kjør main-metoden i `HelloWorldApplication` og gå til http://localhost:8080/he
 Endre `sayHello` til å øke med 2 for hver gang. Lag en test i `HelloWorldResourceTest` som tester dette.
 
 ### 2.3
-Legg til en ny ressurs-klasse som heter `NameResource`. Legg også til `NameResourceTest` for å teste `NameResource`.
+Legg til en ny klasse `NameResource` i samme mappe som `HelloWorldResource`. Legg `NameResource` til i `HelloWorldApplication.run()` for at applikasjonen skal eksponere ressursen. 
+Legg også til `NameResourceTest` i samme mappe som `HelloWorldResourceTest` for å teste `NameResource`.
 
 ### 2.4
 Legg til et `Map<Integer, String>` i `NameResource` hvor integeren er en id, og stringen er et navn.
 Lag en POST REST-metode for å legge til et navn i Mapet med en stigende id. Urlen til REST-metoden skal være `http://localhost:8080/navn`
+Lag en test for denne metoden i `NameResourceTest`.
 
 ### 2.5
-Lag en GET REST-metode for å liste ut alle navnene i Mapet. Urlen skal være `http://localhost:8080/navn`
+Lag en GET REST-metode for å liste ut alle navnene i Mapet. Urlen skal være `http://localhost:8080/navn`.
+Lag en test for denne metoden i `NameResourceTest`.
 
 ### 2.6
 Lag en GET REST-metode for å liste ut navnet for en gitt id. Urlen skal være `http://localhost:8080/navn/<id>`
+Lag en test for denne metoden i `NameResourceTest`.
 
 ### 2.7
 Lag en PUT REST-metode for å endre et navn. Urlen skal være `http://localhost:8080/navn/<id>`
+Lag en test for denne metoden i `NameResourceTest`.
 
 ### 2.8
 Lag en DELETE REST-metode for å slette et navn. Urlen skal være `http://localhost:8080/navn/<id>`
+Lag en test for denne metoden i `NameResourceTest`.
 
 ## Oppgave 3: Lys opp i klasserommet
 Her skal du bruke HueKlient til å styre lyspærene vi har satt opp. Når du får beskjed om å autentisere, må du gå ned til HUBen og trykke på knappen.
