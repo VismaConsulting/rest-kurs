@@ -70,10 +70,27 @@ Lag en PUT REST-metode for å endre et navn. Urlen skal være `http://localhost:
 Lag en DELETE REST-metode for å slette et navn. Urlen skal være `http://localhost:8080/navn/<id>`
 
 ## Oppgave 3: Lys opp i klasserommet
+Her skal du bruke HueKlient til å styre lyspærene vi har satt opp. Når du får beskjed om å autentisere, må du gå ned til HUBen og trykke på knappen.
 
 ### 3.1
+Få en av lyspærene til å lyse i en valgfri farge.
 
+### 3.2
+Få alle tre lyspærene til å lyse i forskjellige farger.
 
+### 3.3
+Få en lyspære til å forandre farge fra blå til rød til grønn.
+
+### 3.4
+Gjør andre kule ting med lyspærene.
+
+## Oppgave 4: Post MEME på Twitter
+
+### 4.1
+Bruk [memegenerator.net](http://version1.api.memegenerator.net/) sitt API til å lage et bilde med en morsom tekst.
+
+### 4.2
+Lag en ny metode i TwitterKlient for å poste bildet.
 
 
 
