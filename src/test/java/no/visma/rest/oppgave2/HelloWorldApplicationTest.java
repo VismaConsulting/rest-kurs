@@ -1,5 +1,6 @@
 package no.visma.rest.oppgave2;
 
+import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -12,7 +13,7 @@ public class HelloWorldApplicationTest {
 
     @ClassRule
     public static final DropwizardAppRule<HelloWorldConfiguration> RULE =
-            new DropwizardAppRule<>(HelloWorldApplication.class, null);
+            new DropwizardAppRule<>(HelloWorldApplication.class, ResourceHelpers.resourceFilePath("test-configuration.yaml"));
 
     @Test
     public void server_svarer_200_ok() {
