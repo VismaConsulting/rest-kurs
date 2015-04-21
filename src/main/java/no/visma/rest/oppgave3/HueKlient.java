@@ -16,11 +16,11 @@ import java.io.StringReader;
 
 public class HueKlient {
     private final Client client;
-    private final String hueUri = "http://10.21.11.103/api/westerdals/";
+    private final String hueUri = "http://192.168.1.104/api/westerdahls/";
 
     public static void main(String[] args) {
         HueKlient klient = new HueKlient();
-        klient.toggleAllLights();
+        klient.otherCoolThings();
     }
 
     public HueKlient() {
@@ -45,4 +45,54 @@ public class HueKlient {
             client.target(uriBuilder.build()).request().put(Entity.json(build.toString()));
         }
     }
+
+    //3.1
+    private void lightOneUp() {
+        JsonObject build = Json.createObjectBuilder().add("on", true).add("hue", 46920).build();
+        UriBuilder uriBuilder = UriBuilder.fromUri(hueUri).path("lights").path(String.valueOf(3)).path("state");
+        client.target(uriBuilder).request().put(Entity.json(build.toString()));
+    }
+
+    //3.2
+    private void lightThemAll() {
+        for (int i = 1; i < 4; i++) {
+            JsonObject build = Json.createObjectBuilder().add("on", true).add("hue",20000).build();
+            UriBuilder uriBuilder = UriBuilder.fromUri(hueUri).path("lights").path(String.valueOf(i)).path("state");
+            System.out.println("uriBuilder.build() = " + uriBuilder.build());
+            client.target(uriBuilder.build()).request().put(Entity.json(build.toString()));
+        }
+    }
+
+    //3.3
+    private void blueToRedToGreen() {
+        for (int i = 1; i < 4; i++) {
+            JsonObject blue = Json.createObjectBuilder().add("on", true).add("hue", 46920).add("transitiontime", 10).build();
+            JsonObject red = Json.createObjectBuilder().add("on", true).add("hue", 65535).add("transitiontime", 10).build();
+            JsonObject green = Json.createObjectBuilder().add("on", true).add("hue", 25500).add("transitiontime", 10).build();
+            UriBuilder uriBuilder = UriBuilder.fromUri(hueUri).path("lights").path(String.valueOf(i)).path("state");
+            client.target(uriBuilder.build()).request().put(Entity.json(blue.toString()));
+            client.target(uriBuilder.build()).request().put(Entity.json(red.toString()));
+            client.target(uriBuilder.build()).request().put(Entity.json(green.toString()));
+        }
+    }
+
+    //3.4
+    private void otherCoolThings() {
+        for (int i = 1; i < 4; i++) {
+            JsonObject blue = Json.createObjectBuilder().add("effect", "colorloop").add("transitiontime", 10).build();
+            JsonObject red = Json.createObjectBuilder().add("effect", "colorloop").add("transitiontime", 30).build();
+            JsonObject green = Json.createObjectBuilder().add("effect", "colorloop").add("transitiontime", 40).build();
+            UriBuilder uriBuilder = UriBuilder.fromUri(hueUri).path("lights").path(String.valueOf(i)).path("state");
+            client.target(uriBuilder.build()).request().put(Entity.json(blue.toString()));
+            client.target(uriBuilder.build()).request().put(Entity.json(red.toString()));
+            client.target(uriBuilder.build()).request().put(Entity.json(green.toString()));
+        }
+    }
+
+
+
+
+
+
+
 }
