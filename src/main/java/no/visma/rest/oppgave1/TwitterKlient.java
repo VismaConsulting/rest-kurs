@@ -14,11 +14,13 @@ public class TwitterKlient {
 
     private static final String FRIENDS_TIMELINE_URI = "https://api.twitter.com/1.1/statuses/home_timeline.json";
     private static final String FRIENDSHIPS_CREATE = "https://api.twitter.com/1.1/friendships/create.json";
+    private static final String FRIENDSHIPS_DESTROY = "https://api.twitter.com/1.1/friendships/destroy.json";
     private final Client client;
 
     public static void main(String[] args) {
         TwitterKlient klient = new TwitterKlient();
         klient.hentTweets();
+        klient.follow("devops_borat");
     }
 
     public TwitterKlient() {
@@ -48,6 +50,34 @@ public class TwitterKlient {
         for (final Tweet tweet : tweets) {
             System.out.println(tweet.getUser().getName() + "\t -> " + tweet.getText());
         }
+    }
+
+    public void follow(String user) {
+        Response response = client.target(FRIENDSHIPS_DESTROY).queryParam("screen_name", user).request().post(null);
+
+        System.out.println(response);
+
+        System.out.println("Statuskode: " + response.getStatus());
+
+        System.out.println(response.readEntity(String.class));
+    }
+
+    public void unfollow(String user) {
+        Response response = client.target(FRIENDSHIPS_DESTROY).queryParam("screen_name", user).request().post(null);
+
+        System.out.println(response);
+
+        System.out.println("Statuskode: " + response.getStatus());
+
+        System.out.println(response.readEntity(String.class));
+    }
+
+    public void postTweet() {
+        String target = "https://api.twitter.com/1.1/statuses/update.json";
+        Response response = client.target(target).queryParam("status", "WOOT #restFTW ").request().post(null);
+        System.out.println(response);
+        System.out.println("Statuskode: " + response.getStatus());
+        System.out.println(response.readEntity(String.class));
     }
 
     private void verifiserResponseStatuskode(Response response, int statuskode) {

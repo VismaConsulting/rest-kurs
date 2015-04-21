@@ -23,6 +23,6 @@ public class HelloWorldResource {
     @GET
     @Timed
     public Long sayHello(@QueryParam("name") Optional<String> name) {
-        return counter.incrementAndGet();
+        return counter.addAndGet(2);
     }
 }
