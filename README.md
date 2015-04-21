@@ -13,16 +13,12 @@ Last ned dette repositoriet til din PC. Det kan du gjøre på noen forskjellige 
 Nå har du kildekoden på maskinen din, og da må du bare importere den til din IDE.
 
 #### Eclipse
-
 Kjør `mvn eclipse:eclipse` og importer inn i Eclipse.
 
-
 #### IntelliJ Idea
-
 1. Åpne IntelliJ. Velg File -> Open, og velg pom.xml i rest-kurs-mappen.
 
 ### Bygg
-
 Kjør `mvn clean install` for å laste ned avhengigheter, bygge prosjektet og kjøre alle testene.
 
 ## Oppgave 1: Bruke et API
