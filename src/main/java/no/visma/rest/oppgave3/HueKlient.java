@@ -16,7 +16,7 @@ import java.io.StringReader;
 
 public class HueKlient {
     private final Client client;
-    private final String hueUri = "http://192.168.1.104/api/westerdahls/";
+    private final String hueUri = "http://192.168.1.104/api/westerdals/";
 
     public static void main(String[] args) {
         HueKlient klient = new HueKlient();

@@ -53,7 +53,7 @@ public class TwitterKlient {
     }
 
     public void follow(String user) {
-        Response response = client.target(FRIENDSHIPS_DESTROY).queryParam("screen_name", user).request().post(null);
+        Response response = client.target(FRIENDSHIPS_CREATE).queryParam("screen_name", user).request().post(null);
 
         System.out.println(response);
 
@@ -74,7 +74,7 @@ public class TwitterKlient {
 
     public void postTweet() {
         String target = "https://api.twitter.com/1.1/statuses/update.json";
-        Response response = client.target(target).queryParam("status", "WOOT #restFTW ").request().post(null);
+        Response response = client.target(target).queryParam("status", "WOOT #restFTW @henrikno").request().post(null);
         System.out.println(response);
         System.out.println("Statuskode: " + response.getStatus());
         System.out.println(response.readEntity(String.class));
