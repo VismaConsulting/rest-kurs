@@ -22,20 +22,21 @@ Kjør `mvn eclipse:eclipse` og importer inn i Eclipse.
 Kjør `mvn clean install` for å laste ned avhengigheter, bygge prosjektet og kjøre alle testene.
 
 ## Oppgave 1: Bruke et API
-Tesla sitt API gir tilgang til en del informasjon om de kjøretøyene man eier.
+Man må ha en konto på Twitter for å kunne gjøre oppgaven, så hvis man ikke har det, lag en tullekonto, eller sett deg sammen med en som har det.
+
+`TwitterKlient.java` har i dag funksjonalitet for å koble seg til Twitter, og hente en liste med tweets.
 
 ### 1.1
-Kjør xxx for å hente ut en liste over alle kjøretøy som hører til eieren.
+Kjør `TwitterKlient` for å hente ut en liste med tweets. Følg instruksjonene på skjermen for å autentisere.
 
 ### 1.2
-Legg til en metode for å hente ut statusen (vehicle_state) til bilen.
+Legg til en metode for å følge en Twitter-bruker.
 
-<!-- TODO: Skal disse flyttes til Oppgave 3? -->
 ### 1.3
-Legg til en metode for å blinke lysene.
+Legg til en metode for å slutte å følge en Twitter-bruker.
 
 ### 1.4
-Legg til en metode som åpner bagasjerommet.
+Legg til en metode for å tweete en melding med hashtagen #restFTW med mention til @andersem og @henrikno.
 
 
 ## Oppgave 2: Lage et eget API
@@ -72,30 +73,45 @@ Lag en test for denne metoden i `ColourResourceTest`.
 Lag en DELETE REST-metode for å slette en farge. Urlen skal være `http://localhost:8080/farge/<id>`
 Lag en test for denne metoden i `ColourResourceTest`.
 
-<!-- TODO: omgjøre til å utføre operasjoner på Tesla? -->
-## Oppgave 3: Lys opp i klasserommet
+## Oppgave 3: Kall mot en tesla
+Tesla sitt API gir tilgang til en del informasjon om de kjøretøyene man eier og lar deg utføre noen fysiske ting med bilen.
+API-url'er finnes på http://docs.timdorr.apiary.io/
+
+### 3.1
+Legg til en metode for å hente ut en liste over alle kjøretøy som hører til eieren.
+
+### 3.2
+Legg til en metode for å hente ut statusen (vehicle_state) til bilen.
+
+### 3.3
+Legg til en metode for å blinke lysene.
+
+### 3.4
+Legg til en metode som åpner bagasjerommet.
+
+## Oppgave 4: Lys opp i klasserommet
 Her skal du bruke HueKlient til å styre lyspærene vi har satt opp.
 Les om APIene på http://www.developers.meethue.com/philips-hue-api (Du må registrere deg for å se URLene du kan bruke)
 Lær av toggleAllLights for å kunne sette state på pærene.
 
-### 3.1
+### 4.1
 Få en av lyspærene til å lyse i en valgfri farge.
 
-### 3.2
+### 4.2
 Få alle tre lyspærene til å lyse i forskjellige farger.
 
-### 3.3
+### 4.3
 Få en lyspære til å forandre farge fra blå til rød til grønn.
 
-### 3.4
+### 4.4
 Gjør andre kule ting med lyspærene.
 
-## Oppgave 4: Post MEME på Twitter
+## Oppgave 5: Post MEME på Twitter
 
 Ta utgangspunkt i MemeKlient for å løse følgende oppgaver.
 
-### 4.1
+### 5.1
 Bruk [memegenerator.net](http://version1.api.memegenerator.net/) sitt API til å lage et bilde med en morsom tekst.
 
-### 4.2
-Lag en ny metode i TwitterKlient for å poste bildet fra 4.1
+### 5.2
+Lag en ny metode i TwitterKlient for å poste bildet fra 5.1
