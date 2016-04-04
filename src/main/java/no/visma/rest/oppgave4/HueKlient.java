@@ -1,4 +1,4 @@
-package no.visma.rest.oppgave3;
+package no.visma.rest.oppgave4;
 
 import org.glassfish.jersey.jackson.JacksonFeature;
 
@@ -11,7 +11,6 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
-import java.io.BufferedReader;
 import java.io.StringReader;
 
 public class HueKlient {
