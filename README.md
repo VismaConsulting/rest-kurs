@@ -36,7 +36,7 @@ Legg til en metode for å følge en Twitter-bruker.
 Legg til en metode for å slutte å følge en Twitter-bruker.
 
 ### 1.4
-Legg til en metode for å tweete en melding med hashtagen #restFTW med mention til `@andersem` og `@alfsimen`.
+Legg til en metode for å tweete en melding med hashtagen #restFTW med mention til `@andersems` og `@alfsimen`.
 
 
 ## Oppgave 2: Lage et eget API
